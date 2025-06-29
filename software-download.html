@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensar Captcha - Download Your Bot-Buster!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #f3f4f6;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border-radius: 20px;
+        }
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            white-space: nowrap;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        .nav-link.active {
+            background-color: #4f46e5;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .software-list-box {
+            background-color: rgba(0, 0, 0, 0.2); /* Darker background for the box */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 2rem; /* Spacing from header */
+            max-height: 400px; /* Fixed height for scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+            width: 100%;
+            display: flex; /* Use flex for internal layout */
+            flex-direction: column; /* Stack items vertically */
+            gap: 1rem; /* Space between software entries */
+            position: relative; /* For scroll indicators later if needed */
+        }
+        .software-entry {
+            background-color: rgba(255, 255, 255, 0.1); /* Lighter background for each entry */
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align text to start */
+            text-align: left; /* Text aligns left */
+            gap: 0.5rem; /* Space between elements in entry */
+        }
+        .software-entry .version-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #fff;
+        }
+        .software-entry .release-date {
+            font-size: 0.875rem; /* text-sm */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .download-button-entry { /* Style for individual download buttons within the box */
+            background: linear-gradient(45deg, #3b82f6 0%, #2563eb 100%);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1; /* Adjust line height to prevent too much vertical space */
+        }
+        .download-button-entry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .no-software-message {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            color: #e2e8f0; /* slate-200 */
+            text-align: center;
+            padding: 3rem 1rem; /* More padding to center the text */
+            flex-grow: 1; /* Makes message take available space in flex container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="container max-w-4xl w-full p-6 sm:p-8 md:p-10 lg:p-12 text-center flex flex-col items-center space-y-8 rounded-xl">
+        <!-- Navigation Bar -->
+        <nav class="w-full mb-8">
+            <ul class="flex flex-wrap justify-center gap-4 text-lg font-semibold text-white">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="update-log.html" class="nav-link">Update Log</a></li>
+                <li><a href="software-download.html" class="nav-link active">Download</a></li>
+                <li><a href="license.html" class="nav-link">License</a></li>
+            </ul>
+        </nav>
+
+        <header class="mb-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
+                <span class="block">Get Pensar Captcha:</span> <span class="block mt-2">Your Anti-Bot Arsenal Awaits!</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-indigo-100 italic">
+                Choose your weapon against the robotic uprising!
+            </p>
+        </header>
+
+        <main class="w-full flex flex-col items-center">
+            <!-- The main "Software Box" where downloads will be listed -->
+            <div id="softwareListBox" class="software-list-box">
+                <!-- Content will be dynamically injected here by JavaScript -->
+                <!-- If no software, it shows "No software available" -->
+                <!-- If software, it lists them with download buttons -->
+            </div>
+        </main>
+
+        <footer class="mt-8 text-center text-sm text-indigo-200">
+            <p>&copy; 2025 Pensar Captcha. All rights reserved. Get ready to make bots question their life choices!</p>
+            <p class="mt-2">
+                Made with passion and a healthy dose of anti-bot sentiment.
+                <span class="block mt-1">Disclaimer: Downloads may contain extreme levels of awesome. Proceed with caution.</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // OH MY GOD, IMBECILE! This is where you update your software versions!
+        // When you release a new version:
+        // 1. Create the .zip file for your software with the format: vX.X.X_YYYYMMDD_your_name.zip
+        //    Example: v1.1.0_20250701_pensarcaptcha.zip
+        // 2. Place that .zip file in the SAME folder as this HTML file (or in a 'downloads/' subfolder, then adjust 'getFilename').
+        // 3. Add a new object to this 'softwareVersions' array at the TOP for the latest.
+        // 4. Set 'is_latest_release: true' for the new version, and 'is_latest_release: false' for the previous latest.
+        // It's that easy! Like stealing candy from a bot! LOL!
+
+        const softwareVersions = [
+            // Currently, only Version 1.0.0 is available, as per your command!
+            {
+                major: 1, minor: 0, patch: 0,
+                release_date_str: "20250629", //YYYYMMDD format for filename
+                name_suffix: "pensarcaptcha", // The 'name' part of the filename
+                display_version: "1.0.0", // For displaying "v1.0.0"
+                display_date: "June 29, 2025", // Human-readable date for display
+                is_latest_release: true // Set to true for the current main download
+            }
+            // When you release v1.1.0, add it here, and change is_latest_release for v1.0.0 to false!
+            // Example of how you'd add v1.1.0 later:
+            /*
+            , {
+                major: 1, minor: 1, patch: 0,
+                release_date_str: "20250705",
+                name_suffix: "pensarcaptcha",
+                display_version: "1.1.0",
+                display_date: "July 05, 2025",
+                is_latest_release: true
+            }
+            */
+        ];
+
+        // Helper function to compare versions for sorting (e.g., 1.0.0 > 0.9.0)
+        function compareVersions(v1, v2) {
+            const p1 = [v1.major, v1.minor, v1.patch];
+            const p2 = [v2.major, v2.minor, v2.patch];
+            for (let i = 0; i < 3; i++) {
+                if (p1[i] > p2[i]) return -1; // v1 is newer, so it comes first in descending sort
+                if (p1[i] < p2[i]) return 1;  // v2 is newer, so it comes first in descending sort
+            }
+            return 0; // Versions are equal
+        }
+
+        // Helper function to construct the filename from the version object
+        function getFilename(versionObj) {
+            // Adjust this path if you decide to put zip files in a 'downloads/' subfolder
+            return `v${versionObj.major}.${versionObj.minor}.${versionObj.patch}_${versionObj.release_date_str}_${versionObj.name_suffix}.zip`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const softwareListBox = document.getElementById('softwareListBox');
+            
+            // Filter out any entries that are missing crucial information
+            const validSoftwareVersions = softwareVersions.filter(v => 
+                typeof v.major === 'number' && typeof v.minor === 'number' && typeof v.patch === 'number' &&
+                typeof v.release_date_str === 'string' && typeof v.name_suffix === 'string' &&
+                typeof v.display_version === 'string' && typeof v.display_date === 'string' &&
+                typeof v.is_latest_release === 'boolean'
+            );
+
+            // Sort all valid versions from newest to oldest for display
+            validSoftwareVersions.sort(compareVersions);
+
+            if (validSoftwareVersions.length === 0) {
+                // If no software versions exist, display the "No Software Available" message
+                softwareListBox.innerHTML = `
+                    <div class="no-software-message">
+                        No Pensar Captcha Software Available Yet! <br>
+                        Our bot-busting arsenal is still being forged. Check back soon for groundbreaking releases!
+                    </div>
+                `;
+                // No need for a scrollbar if content is small
+                softwareListBox.style.overflowY = 'hidden'; 
+                softwareListBox.style.maxHeight = 'fit-content'; // Adjust height to content
+            } else {
+                // If software exists, dynamically create and append the elements
+                // Clear any existing content first
+                softwareListBox.innerHTML = ''; 
+
+                // Add a heading inside the box for clarity
+                const heading = document.createElement('h2');
+                heading.className = 'text-2xl sm:text-3xl font-bold mb-4 text-white text-center w-full';
+                heading.textContent = 'Available Pensar Captcha Software Versions';
+                softwareListBox.appendChild(heading);
+
+                // Add main description inside the box
+                const description = document.createElement('p');
+                description.className = 'text-base sm:text-lg mb-6 text-indigo-50 text-center w-full';
+                description.textContent = 'Download the version that best suits your needs. The latest version is recommended for maximum bot pain!';
+                softwareListBox.appendChild(description);
+
+
+                validSoftwareVersions.forEach(version => {
+                    const entry = document.createElement('div');
+                    entry.className = 'software-entry flex flex-col sm:flex-row items-center sm:justify-between w-full'; // Flex for alignment
+                    
+                    const textContent = document.createElement('div');
+                    textContent.className = 'flex flex-col items-center sm:items-start mb-2 sm:mb-0'; // Stack text content on small screens
+                    
+                    const versionTitle = document.createElement('p');
+                    versionTitle.className = 'version-title';
+                    // Display "(Latest)" only if it's explicitly marked as the latest
+                    versionTitle.textContent = `Pensar Captcha v${version.display_version} ${version.is_latest_release ? '(Latest)' : ''}`;
+                    textContent.appendChild(versionTitle);
+
+                    const releaseDate = document.createElement('p');
+                    releaseDate.className = 'release-date';
+                    releaseDate.textContent = `Released: ${version.display_date}`;
+                    textContent.appendChild(releaseDate);
+
+                    entry.appendChild(textContent);
+
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = getFilename(version); 
+                    downloadLink.download = getFilename(version); 
+                    downloadLink.className = `download-button-entry ${version.is_latest_release ? 'latest' : 'old-version'}`;
+                    downloadLink.textContent = `Download ${version.is_latest_release ? 'Latest' : 'v' + version.display_version}`;
+                    entry.appendChild(downloadLink);
+
+                    softwareListBox.appendChild(entry);
+                });
+
+                // Ensure scrollbar is active if content overflows, otherwise hidden
+                softwareListBox.style.overflowY = 'auto'; 
+                softwareListBox.style.maxHeight = '400px'; 
+            }
+        });
+    </script>
+</body>
+</html>

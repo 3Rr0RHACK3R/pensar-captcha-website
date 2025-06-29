@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensar Captcha - The Ultimate Bot Brain-Teaser!</title>
+    <!-- Tailwind CSS CDN for easy styling. Because who has time for manual CSS anymore, right? -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using Google Fonts for that sleek 'Inter' look. Aesthetics, Imbecile, aesthetics! -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* A cool gradient because we're fancy */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #f3f4f6; /* Light gray text for contrast */
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent background for that frosted glass effect */
+            backdrop-filter: blur(10px); /* The magic sauce for the frosted look */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* A subtle border */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* A nice shadow to make it pop */
+            border-radius: 20px; /* Super rounded corners because sharp edges are so last decade */
+        }
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly opaque for distinction */
+            border-radius: 15px; /* Rounded corners for nav links too */
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        .nav-link.active {
+            background-color: #4f46e5; /* A bit darker purple for the active page */
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn-download {
+            background: linear-gradient(45deg, #10b981 0%, #059669 100%);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            display: inline-block; /* Make the anchor tag behave like a block for styling */
+            text-decoration: none; /* Remove underline from the link */
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="container max-w-4xl w-full p-6 sm:p-8 md:p-10 lg:p-12 text-center flex flex-col items-center space-y-8 rounded-xl">
+        <!-- Navigation Bar: Now you can actually go places! -->
+        <nav class="w-full mb-8">
+            <ul class="flex flex-wrap justify-center gap-4 text-lg font-semibold text-white">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="update-log.html" class="nav-link">Update Log</a></li>
+                <li><a href="software-download.html" class="nav-link">Download</a></li>
+                <li><a href="license.html" class="nav-link">License</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header Section: Because first impressions are everything, even for bots. -->
+        <header class="mb-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
+                <span class="block">Pensar Captcha:</span> <span class="block mt-2">Unleash Your Inner Bot-Bouncer!</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-indigo-100 italic">
+                Tired of robots pretending to be humans? Make them solve *your* puzzles!
+            </p>
+        </header>
+
+        <!-- Main Content Section: Where the marketing magic happens, Imbecile! -->
+        <main class="w-full">
+            <section class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                    Why settle for boring captchas when you can craft your own?
+                </h2>
+                <p class="text-base sm:text-lg mb-8 text-indigo-50">
+                    Just like Cloudflare, but with *your* personal touch! Our revolutionary software, **Pensar Captcha**, lets you design, deploy, and manage custom captchas that are so unique, bots will throw their circuits in frustration. It's time to take back the internet, one quirky puzzle at a time. This ain't your grandma's "click all the traffic lights" routine! (Unless your grandma is a super hacker, then maybe it is!)
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
+                    <img src="https://placehold.co/400x250/333333/FFFFFF?text=Your+Pensar+Captcha+Here" alt="Placeholder for custom captcha" class="rounded-lg shadow-lg w-full sm:w-1/2 md:w-2/3 lg:w-1/2 object-cover">
+                </div>
+
+                <!-- FIXED: Changed button with onclick to an <a> tag for native navigation -->
+                <a href="software-download.html"
+                    class="btn-download px-8 py-4 text-xl sm:text-2xl font-bold text-white rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-75 transition duration-300 ease-in-out transform hover:scale-105">
+                    Get Pensar Captcha Software!
+                </a>
+                <p class="mt-4 text-sm text-indigo-200">
+                    (Downloadable, self-hosted, maximum bot pain guaranteed! Free tier dreams, baby!)
+                </p>
+            </section>
+
+            <!-- Features Section: Because every epic product needs a killer feature list. -->
+            <section class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
+                    What's Baking in the Bot-Busting Oven?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">🤯 Infinite Customization</h3>
+                        <p class="text-base text-indigo-50">
+                            Design puzzles from scratch! From "spot the cat wearing sunglasses" to "solve this quadratic equation." The only limit is your imagination (and maybe your user's patience, lol). Think beyond simple clicks; think brain-bending!
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">🛡️ Next-Gen Bot Detection</h3>
+                        <p class="text-base text-indigo-50">
+                            Our algorithms are smarter than your average AI. They can sniff out a bot faster than you can say "I am not a robot," which, ironically, is what bots always say. They'll be saying "Pensar Captcha is too smart!"
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">📈 Analytics & Insights</h3>
+                        <p class="text-base text-indigo-50">
+                            See how many bots you've thwarted! Track failed attempts and laugh maniacally. We give you the data to fuel your bot-slaying rampage. It's like a video game, but for internet security!
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">🚀 Easy Deployment</h3>
+                        <p class="text-base text-indigo-50">
+                            Integrate your custom captcha with just a few lines of code. It's so easy, even your coding-averse uncle could do it. (No offense, uncle, but this is next level!)
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">✨ Regularly Updated</h3>
+                        <p class="text-base text-indigo-50">
+                            We're constantly cooking up new features to keep ahead of those pesky bots. Think of us as the secret agents of internet security, but with more snacks. And more "pensar"!
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">🌐 Community Driven</h3>
+                        <p class="text-base text-indigo-50">
+                            Got a wild idea for a captcha? Share it with the community! We're building a network of human heroes against the robotic uprising. Together, we can make bots *think*!
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-8 text-center text-sm text-indigo-200">
+            <p>&copy; 2025 Pensar Captcha. All rights reserved. No bots were harmed in the making of this software (yet). They just had to *think* really hard.</p>
+            <p class="mt-2">
+                Made with passion and a healthy dose of anti-bot sentiment.
+                <span class="block mt-1">Disclaimer: May cause extreme frustration for advanced AI, leading to smoke detectors going off. You've been warned!</span>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
