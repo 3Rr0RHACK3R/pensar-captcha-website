@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensar Captcha - Support Our Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #f3f4f6;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border-radius: 20px;
+        }
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            white-space: nowrap;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        .nav-link.active {
+            background-color: #4f46e5;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Custom styles for the copy button and address display */
+        .copy-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .bitcoin-address-display {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            font-family: 'Consolas', 'monospace';
+            font-size: 1rem;
+            word-break: break-all; /* Ensures long address wraps */
+            text-align: center;
+            color: #b2f5ea; /* Light teal for code/address */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer; /* Indicate it's clickable */
+            transition: background-color 0.2s ease-in-out;
+        }
+        .bitcoin-address-display:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .copy-button {
+            background: linear-gradient(45deg, #10b981 0%, #059669 100%); /* Green gradient */
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Pill shape */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .copy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #059669 0%, #10b981 100%); /* Reverse gradient on hover */
+        }
+        .copy-status-message {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #4ade80; /* Green for success */
+            visibility: hidden; /* Hidden by default */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .copy-status-message.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        .guide-list {
+            list-style: decimal;
+            list-style-position: inside;
+            text-align: left;
+            margin-left: 1rem;
+            color: #cbd5e1;
+            font-size: 1rem;
+        }
+        .guide-list li {
+            margin-bottom: 0.75rem;
+        }
+        .guide-list li strong {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="container max-w-4xl w-full p-6 sm:p-8 md:p-10 lg:p-12 text-center flex flex-col items-center space-y-8 rounded-xl">
+        <!-- Navigation Bar -->
+        <nav class="w-full mb-8">
+            <ul class="flex flex-wrap justify-center gap-4 text-lg font-semibold text-white">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="update-log.html" class="nav-link">Update Log</a></li>
+                <li><a href="software-download.html" class="nav-link">Download</a></li>
+                <li><a href="license.html" class="nav-link">License</a></li>
+                <li><a href="donate.html" class="nav-link active">💖 Donate</a></li>
+            </ul>
+        </nav>
+
+        <header class="mb-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
+                <span class="block">Support Pensar Captcha:</span> <span class="block mt-2">Help Us Fight the Bots!</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-indigo-100 italic">
+                Every contribution helps us build a bot-free internet.
+            </p>
+        </header>
+
+        <main class="w-full text-left">
+            <section class="mb-12 update-entry">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    Why Your Support Matters
+                </h2>
+                <p class="text-indigo-50 mb-4">
+                    Pensar Captcha is a passion project dedicated to providing robust, user-friendly, and self-hostable anti-bot solutions. We believe in an internet where humans can interact freely, without the constant annoyance of automated threats.
+                </p>
+                <p class="text-indigo-50 mb-4">
+                    While our software is free and open-source, maintaining and expanding it requires resources. Your generous donations will directly contribute to:
+                </p>
+                <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-2">
+                    <li>🌐 **Acquiring a Real Domain (`pensarcaptcha.com`):** A custom domain significantly boosts our credibility, makes us easier to find, and establishes a stronger brand presence.</li>
+                    <li>☁️ **Hosting a "Pensar Cloud" Demo API:** This will allow developers to test and integrate Pensar Captcha instantly, without needing to set up their own backend, making our API more accessible and known.</li>
+                    <li>🔬 **Research & Development for v3.0.0+:** Funding for advanced AI-driven challenges, behavioral biometrics, and more innovative ways to confuse even the smartest bots.</li>
+                    <li>🛠️ **Infrastructure & Tools:** Covering costs for development tools, testing environments, and potential server resources for future hosted services.</li>
+                </ul>
+                <p class="text-indigo-50 mt-6 text-center text-lg font-semibold">
+                    Join us in the fight against the robotic uprising! Your support is invaluable.
+                </p>
+            </section>
+
+            <section class="mb-12 update-entry">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    How You Can Donate (It's Easier Than Solving a Captcha!)
+                </h2>
+                <p class="text-indigo-100 mb-6 text-center">
+                    We appreciate direct support to help us grow. A minimum donation of **$5 USD equivalent** is suggested to help us cover essential costs and keep fighting the good fight!
+                </p>
+                <div class="space-y-6 text-center">
+                    <div class="bg-yellow-800 bg-opacity-30 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Bitcoin (BTC)</h3>
+                        <p class="text-indigo-100 mb-4">
+                            Support us directly with Bitcoin! This is the most direct way to contribute without traditional bank accounts.
+                        </p>
+                        <div class="copy-container">
+                            <span id="bitcoinAddress" class="bitcoin-address-display" title="Click to copy address">
+                                bc1q80ptllpkl63u0xdx5dy3f6y5emgyp9p4l3j06u
+                            </span>
+                            <button id="copyBitcoinAddressBtn" class="copy-button">
+                                Copy Address
+                            </button>
+                            <p id="copyStatusMessage" class="copy-status-message">Copied to clipboard!</p>
+                        </div>
+                        <p class="text-indigo-200 text-sm mt-4">
+                            (Please double-check the address when sending funds!)
+                        </p>
+
+                        <div class="mt-8 text-left">
+                            <h4 class="text-xl font-bold text-white mb-4">Step-by-Step Guide: Sending Bitcoin to Pensar Captcha!</h4>
+                            <ol class="guide-list">
+                                <li><strong>Step 1: Get Bitcoin Ready!</strong><br>
+                                    You'll need some Bitcoin in a wallet or on a cryptocurrency exchange (like Coinbase, Binance, Kraken, Electrum, Trust Wallet, etc.). If you don't have any, you'll need to acquire some first!</li>
+                                <li><strong>Step 2: Open Your Wallet/Exchange!</strong><br>
+                                    Log in to your Bitcoin wallet application or your preferred cryptocurrency exchange website.</li>
+                                <li><strong>Step 3: Find the "Send" or "Withdraw" Option!</strong><br>
+                                    Look for a button or option labeled "Send," "Withdraw," or "Transfer" for Bitcoin (BTC).</li>
+                                <li><strong>Step 4: Paste Our Glorious Address!</strong><br>
+                                    When prompted for the recipient's address, use the "Copy Address" button above to copy our Bitcoin address (`bc1q80ptllpkl63u0xdx5dy3f6y5emgyp9p4l3j06u`). Paste it *exactly* into the "Recipient Address" or "To" field. **Always double-check the first few and last few characters after pasting!**</li>
+                                <li><strong>Step 5: Enter the Amount!</strong><br>
+                                    Enter the amount of Bitcoin you wish to send. Remember, we suggest a minimum of **$5 USD equivalent** to help us fight the good fight! Your wallet/exchange might show you the USD equivalent.</li>
+                                <li><strong>Step 6: Review and Confirm!</strong><br>
+                                    Carefully review all the transaction details (address, amount, network fees). Once you're sure everything is correct, confirm the transaction.</li>
+                                <li><strong>Step 7: You're a Hero!</strong><br>
+                                    Your Bitcoin is now on its way to support the Pensar Captcha mission! Thank you for helping us make bots cry binary tears!</li>
+                            </ol>
+                            <p class="text-indigo-200 text-sm mt-4">
+                                (Note: There will be a small "network fee" for sending Bitcoin, which goes to the miners. This is separate from your donation amount!)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 update-entry">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    The Future of Pensar Captcha: Your Support Fuels Innovation!
+                </h2>
+                <p class="text-indigo-50 mb-4">
+                    Your generous contributions aren't just for a domain; they're an investment in a bot-free future and a more powerful Pensar Captcha ecosystem! We're constantly thinking bigger, better, and more bot-confounding!
+                </p>
+                <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-2">
+                    <li>🚀 **Infinite Free Captcha API (Our Ultimate Goal!):** We dream of a future where we can offer an **infinite, completely free CAPTCHA API** to all users, hosted by us! If we have the means and your incredible support, we will make this a reality, providing a truly accessible and powerful anti-bot solution for everyone.</li>
+                    <li>🌐 **Free Backend Hosting & Personalized Sub-Domains:** We are doing our absolute best to figure out how to offer **free backend hosting** for Pensar Captcha to our users! Imagine integrating our API without even running your own server – pure magic! Furthermore, we will try our hardest to offer users their own `yourname.pensarcaptcha.com` sub-domains, complete with robust backend services, if we can afford to do so. This would make integration even smoother and give your projects a professional edge!</li>
+                    <li>✨ **Advanced Features & Next-Gen Challenges:** Your support directly funds the development of even more sophisticated, adaptive, and utterly perplexing captcha challenges for v3.0.0 and beyond! We're talking cutting-edge AI-driven behavioral analysis, dynamic interactive puzzles, and features that will make bots *think* (and fail!) like never before.</li>
+                    <li>💖 **A Thriving Community & More Website Goodies:** We aim to build a robust community around Pensar Captcha, with dedicated developer portals, extensive documentation, and forums where you can share ideas and get support. Expect a website bursting with new features, guides, and resources to empower your bot-busting journey!</li>
+                </ul>
+                <p class="text-indigo-50 mt-6 text-center text-lg font-semibold">
+                    Every Satoshi you send helps us turn these grand dreams into a bot-busting reality! Your donation is a vote for a freer, safer internet. Thank you for being a vital part of the Pensar Captcha revolution – your impact will be felt across the digital world!
+                </p>
+            </section>
+        </main>
+
+        <footer class="mt-8 text-center text-sm text-indigo-200">
+            <p>&copy; 2025 Pensar Captcha. All rights reserved. Together, we can build a bot-free future!</p>
+            <p class="mt-2">
+                Made with passion and a healthy dose of anti-bot sentiment.
+                <span class="block mt-1">Disclaimer: Donations are greatly appreciated and fuel our relentless pursuit of bot confusion!</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bitcoinAddressElem = document.getElementById('bitcoinAddress');
+            const copyBitcoinAddressBtn = document.getElementById('copyBitcoinAddressBtn');
+            const copyStatusMessage = document.getElementById('copyStatusMessage');
+            const bitcoinAddress = bitcoinAddressElem.textContent.trim(); // Get the address text
+
+            // Function to copy text to clipboard
+            function copyToClipboard(text) {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    return navigator.clipboard.writeText(text);
+                } else {
+                    // Fallback for older browsers or restricted environments (like some iframes)
+                    const textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    textarea.style.position = 'fixed'; // Avoid scrolling
+                    document.body.appendChild(textarea);
+                    textarea.focus();
+                    textarea.select();
+                    try {
+                        document.execCommand('copy');
+                        return Promise.resolve();
+                    } catch (err) {
+                        console.error('Fallback: Could not copy text: ', err);
+                        return Promise.reject(err);
+                    } finally {
+                        document.body.removeChild(textarea);
+                    }
+                }
+            }
+
+            // Event listener for the button
+            copyBitcoinAddressBtn.addEventListener('click', () => {
+                copyToClipboard(bitcoinAddress)
+                    .then(() => {
+                        copyStatusMessage.textContent = 'Copied to clipboard!';
+                        copyStatusMessage.classList.add('visible');
+                        setTimeout(() => {
+                            copyStatusMessage.classList.remove('visible');
+                        }, 2500); // Hide message after 2.5 seconds
+                    })
+                    .catch(err => {
+                        copyStatusMessage.textContent = 'Failed to copy! Please try manually.';
+                        copyStatusMessage.style.color = '#f87171'; // Red for error
+                        copyStatusMessage.classList.add('visible');
+                        console.error('Error copying Bitcoin address:', err);
+                    });
+            });
+
+            // Optional: Allow clicking the address itself to copy
+            bitcoinAddressElem.addEventListener('click', () => {
+                copyToClipboard(bitcoinAddress)
+                    .then(() => {
+                        copyStatusMessage.textContent = 'Address copied!';
+                        copyStatusMessage.classList.add('visible');
+                        setTimeout(() => {
+                            copyStatusMessage.classList.remove('visible');
+                        }, 2500);
+                    })
+                    .catch(err => {
+                        copyStatusMessage.textContent = 'Failed to copy! Try the button.';
+                        copyStatusMessage.style.color = '#f87171';
+                        copyStatusMessage.classList.add('visible');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
