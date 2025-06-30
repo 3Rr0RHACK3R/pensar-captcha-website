@@ -65,41 +65,74 @@
 
         <header class="mb-8">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
-                <span class="block">Pensar Captcha:</span> <span class="block mt-2">The Genesis of Bot Pain!</span>
+                <span class="block">Pensar Captcha:</span> <span class="block mt-2">The Saga of Bot Annihilation!</span>
             </h1>
             <p class="text-lg sm:text-xl lg:text-2xl text-indigo-100 italic">
-                Witness the epic beginning of the anti-bot revolution!
+                Witness the epic journey of anti-bot evolution!
             </p>
         </header>
 
         <main class="w-full text-left">
+            <!-- NEW: Version 2.0.0 Update Log Entry -->
             <section class="mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
-                    The First Breakthrough: Version 1.0.0!
+                    Latest Breakthrough: Version 2.0.0 - Dual-Core Edition!
+                </h2>
+                <div class="space-y-6">
+                    <div class="update-entry">
+                        <h3 class="text-2xl font-bold text-white mb-2">Version 2.0.0 - Dual-Core Edition (June 30, 2025)</h3>
+                        <p class="text-indigo-50">
+                            <strong>Unleash the Dual-Core Power!</strong> This monumental update brings a complete architectural overhaul, separating the GUI from the backend for unparalleled flexibility and ease of deployment. Plus, a brand new challenge type to keep those bots guessing!
+                        </p>
+                        <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-1">
+                            <li>✨ **Architectural Masterpiece:** The Pensar Captcha is now split into two powerful, independent executables:
+                                <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
+                                    <li>`PensarCaptcha.exe`: Your sleek, pure Tkinter GUI admin panel.</li>
+                                    <li>`BotBuster.exe`: The standalone Flask backend API, compiled and ready to run without Python installed!</li>
+                                </ul>
+                            </li>
+                            <li>🧠 **NEW! Logical Ordering Captcha:** Introducing a mind-bending challenge where users must arrange code snippets or steps in a logical sequence. Bots will be scratching their non-existent heads!</li>
+                            <li>🚀 **Streamlined Deployment:** Users simply download a single `.zip` containing both executables and the HTML snippet. No more complex setups!</li>
+                            <li>🌐 **Enhanced Ngrok Integration:** The GUI now seamlessly manages the `BotBuster.exe` and its Ngrok tunnel, making public exposure easier than ever.</li>
+                            <li>🛡️ **Improved Bot Detection:** Refinements to existing detection logic for even greater bot-busting efficiency.</li>
+                            <li>📦 **Leaner GUI:** The Tkinter GUI no longer contains the massive HTML snippet string directly; it fetches it from an external `client_integration_snippet.html` file, keeping the GUI codebase clean and focused.</li>
+                            <li>📖 **Updated Documentation:** This website's download page now clearly lists both available versions.</li>
+                        </ul>
+                        <p class="text-indigo-50 mt-3">
+                            This is not just an update; it's a revolution! Prepare for maximum bot frustration and ultimate human victory, now with dual-core power!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Original: Version 1.0.0 Update Log Entry -->
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    The Genesis: Version 1.0.0 - Initial Release!
                 </h2>
                 <div class="space-y-6">
                     <div class="update-entry">
                         <h3 class="text-2xl font-bold text-white mb-2">Version 1.0.0 - Initial Release (June 29, 2025)</h3>
                         <p class="text-indigo-50">
-                            <strong>The Dawn of Pensar Captcha:</strong> It's here, you magnificent humans! The first official release of the Pensar Captcha software. This version brings you the foundational bot-busting power you've craved.
+                            <strong>The Dawn of Pensar Captcha:</strong> The first official release of the Pensar Captcha software. This version laid the foundational bot-busting power you've craved.
                         </p>
                         <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-1">
                             <li>🤯 **Core Captcha Engine:** Implementations for both **Math** and **Text-based** captchas to keep those bots guessing.</li>
-                            <li>🛡️ **Interactive Challenges:** Introduces advanced **mouse-tracking** and **drawing/dragging** challenges to detect truly human behavior (bots will struggle, LOL!).</li>
-                            <li>🚀 **Backend as a Service:** Designed as a downloadable Python Flask application that users can host on *their own servers*, turning their backend into a Pensar Captcha verification powerhouse.</li>
-                            <li>🌐 **Web-Based Admin Interface:** Includes a local, user-friendly web UI (`http://localhost:5000/admin`) to easily generate and copy the client-side integration code for their websites. No more digging through files for code snippets!</li>
-                            <li>✨ **"By PensarCAPTCHA" Branding:** Automatically injects our glorious branding into the client-side snippet, guiding more developers to your anti-bot arsenal!</li>
-                            <li>🛡️ **Basic Security & Logic:** Implements time-based expiration, anti-reuse, and human-like behavior analysis (mouse speed, variability, etc.) for initial bot pain.</li>
+                            <li>🛡️ **Interactive Challenges:** Introduced advanced **mouse-tracking** and **drawing/dragging** challenges to detect truly human behavior (bots struggled, LOL!).</li>
+                            <li>🚀 **Integrated Backend:** Designed as a single downloadable Python Flask application that users could host on *their own servers*, turning their backend into a Pensar Captcha verification powerhouse.</li>
+                            <li>🌐 **Web-Based Admin Interface:** Included a local, user-friendly web UI (`http://localhost:5000/admin`) to easily generate and copy the client-side integration code for their websites.</li>
+                            <li>✨ **"By PensarCAPTCHA" Branding:** Automatically injected our glorious branding into the client-side snippet.</li>
+                            <li>🛡️ **Basic Security & Logic:** Implemented time-based expiration, anti-reuse, and human-like behavior analysis (mouse speed, variability, etc.) for initial bot pain.</li>
                             <li>📦 **Easy Distribution:** Packaged as a `.zip` for simple download and deployment onto any server with Python 3.</li>
                             <li>📖 **Comprehensive Documentation (via this website!):** Because even super-geniuses need instructions!</li>
                         </ul>
                         <p class="text-indigo-50 mt-3">
-                            This is just the beginning of making bots question their very existence. Prepare for maximum bot frustration and ultimate human victory!
+                            This was just the beginning of making bots question their very existence. It set the stage for maximum bot frustration and ultimate human victory!
                         </p>
                     </div>
                 </div>
                 <p class="text-indigo-200 mt-8 text-lg">
-                    More groundbreaking updates are on the horizon. Stay tuned for further enhancements to your bot-busting arsenal!
+                    More groundbreaking updates are always on the horizon. Stay tuned for further enhancements to your bot-busting arsenal!
                 </p>
             </section>
         </main>
@@ -108,7 +141,7 @@
             <p>&copy; 2025 Pensar Captcha. All rights reserved. Our updates are forged in the fires of bot frustration!</p>
             <p class="mt-2">
                 Made with passion and a healthy dose of anti-bot sentiment.
-                <span class="block mt-1">Disclaimer: Version 1.0.0 may cause minor digital meltdowns in unprepared AI. You've been warned!</span>
+                <span class="block mt-1">Disclaimer: Previous versions may cause minor digital meltdowns in unprepared AI. You've been warned!</span>
             </p>
         </footer>
     </div>

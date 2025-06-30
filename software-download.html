@@ -152,30 +152,27 @@
         // It's that easy! Like stealing candy from a bot! LOL!
 
         const softwareVersions = [
-            // Currently, only Version 1.0.0 is available, as per your command!
+            // NEW: Version 2.0.0 - Dual-Core Edition! (Latest and greatest!)
+            {
+                major: 2, minor: 0, patch: 0,
+                release_date_str: "20250630", // YYYYMMDD format for filename
+                name_suffix: "pensarcaptcha", // The 'name' part of the filename
+                display_version: "2.0.0", // For displaying "v2.0.0"
+                display_date: "June 30, 2025", // Human-readable date for display
+                is_latest_release: true // THIS IS THE LATEST!
+            },
+            // Old: Version 1.0.0 - The Original Bot-Buster!
             {
                 major: 1, minor: 0, patch: 0,
-                release_date_str: "20250629", //YYYYMMDD format for filename
+                release_date_str: "20250629", // YYYYMMDD format for filename
                 name_suffix: "pensarcaptcha", // The 'name' part of the filename
                 display_version: "1.0.0", // For displaying "v1.0.0"
                 display_date: "June 29, 2025", // Human-readable date for display
-                is_latest_release: true // Set to true for the current main download
+                is_latest_release: false // No longer the latest, but still awesome!
             }
-            // When you release v1.1.0, add it here, and change is_latest_release for v1.0.0 to false!
-            // Example of how you'd add v1.1.0 later:
-            /*
-            , {
-                major: 1, minor: 1, patch: 0,
-                release_date_str: "20250705",
-                name_suffix: "pensarcaptcha",
-                display_version: "1.1.0",
-                display_date: "July 05, 2025",
-                is_latest_release: true
-            }
-            */
         ];
 
-        // Helper function to compare versions for sorting (e.g., 1.0.0 > 0.9.0)
+        // Helper function to compare versions for sorting (e.g., 2.0.0 > 1.0.0)
         function compareVersions(v1, v2) {
             const p1 = [v1.major, v1.minor, v1.patch];
             const p2 = [v2.major, v2.minor, v2.patch];
@@ -188,8 +185,9 @@
 
         // Helper function to construct the filename from the version object
         function getFilename(versionObj) {
-            // Adjust this path if you decide to put zip files in a 'downloads/' subfolder
-            return `v${versionObj.major}.${versionObj.minor}.${versionObj.patch}_${versionObj.release_date_str}_${versionObj.name_suffix}.zip`;
+            // This assumes your zip files are in the same directory as this HTML file
+            // If you put them in a 'downloads/' subfolder, change this to `downloads/${filename}`
+            return `v${versionObj.display_version}_${versionObj.release_date_str}_${versionObj.name_suffix}.zip`;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
