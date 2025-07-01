@@ -50,6 +50,7 @@
         .update-entry:last-child {
             margin-bottom: 0;
         }
+        /* General teaser section style (for both V4 and V9) */
         .teaser-section {
             background: linear-gradient(45deg, #a78bfa 0%, #8b5cf6 100%); /* A vibrant gradient for the teaser */
             border-radius: 20px;
@@ -89,6 +90,44 @@
         }
         .teaser-section li:hover {
             transform: scale(1.05);
+        }
+        /* Specific styling for the inner update-entry within the teaser */
+        .teaser-section .update-entry {
+            background-color: rgba(0, 0, 0, 0.3); /* Darker, more transparent background */
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: left; /* Align text left within the entry */
+        }
+        .teaser-section .update-entry h3 {
+            color: #fff; /* White heading for contrast */
+        }
+        .teaser-section .update-entry p {
+            color: #e2e8f0; /* Lighter text for readability */
+        }
+        .teaser-section .update-entry ul {
+            list-style: disc; /* Re-enable bullets for lists inside this entry */
+            list-inside: true;
+            margin-left: 1.5rem;
+            color: #cbd5e1;
+        }
+        .teaser-section .update-entry li {
+            background-color: transparent; /* No background for list items here */
+            padding: 0;
+            margin: 0 0 0.5rem 0;
+            display: list-item; /* Ensure list item behavior */
+            font-weight: normal;
+        }
+
+        /* Animation for Version 9.0.0 teaser */
+        @keyframes glowing-border {
+            0% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.7); }
+            50% { box-shadow: 0 0 25px rgba(167, 139, 250, 1), 0 0 30px rgba(139, 92, 246, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.7); }
+        }
+        .v9-epic-teaser {
+            animation: glowing-border 2s infinite alternate; /* Apply the glowing animation */
+            border: 2px solid #a78bfa; /* Add a subtle border to enhance the glow */
         }
     </style>
 </head>
@@ -148,25 +187,54 @@
                 </div>
             </section>
 
-            <!-- NEW SECTION: Teaser for Version 4.0.0 -->
-            <section class="teaser-section mb-12">
-                <h2 class="text-white text-4xl font-extrabold mb-4 drop-shadow-lg">
-                    🔮 What's Next? A Glimpse into Pensar Captcha v4.0.0! 🤫
+            <!-- MODIFIED: Version 4.0.0 - Releasing Tomorrow! -->
+            <section class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    🎉 Get Ready! Version 4.0.0 - The Next Leap in Human Verification - **Dropping Tomorrow!** 🗓️
+                </h2>
+                <div class="space-y-6">
+                    <div class="update-entry">
+                        <h3 class="text-2xl font-bold text-white mb-2">Version 4.0.0 - Releasing July 02, 2025!</h3>
+                        <p class="text-indigo-50">
+                            You've seen the raw power of v3.0.0, but hold onto your keyboards, because Pensar Captcha v4.0.0, codenamed **"The Next Leap,"** is officially launching tomorrow! Our digital architects have been burning the midnight oil, turning those meticulous blueprints into a reality that will make bots weep digital tears of frustration. This isn't just an update; it's a complete reimagining of how humans prove their humanity (and how bots fail miserably, LOL!).
+                        </p>
+                        <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-1">
+                            <li>✨ **Rethinking User Experience:** We've meticulously designed challenges that are even more intuitive and less intrusive for real humans, while simultaneously becoming an impenetrable fortress for bots. Think "frictionless security" that feels like a breeze for you, but a hurricane for automation!</li>
+                            <li>🧠 **Smarter Behavioral Analysis:** Our algorithms have been refined to detect even more subtle nuances in human interaction, making our bot detection even more surgical. It's like giving our algorithms X-ray vision for digital souls, but with more sass!</li>
+                            <li>🚀 **Enhanced Scalability & Performance:** We've built a foundation for Pensar Captcha to handle even more traffic with lightning-fast verification, ensuring your website stays snappy while staying secure. Because nobody likes a slow security guard!</li>
+                            <li>🌐 **Modular Expansion:** The core is now even more extensible, allowing for easier integration of future, mind-blowing challenge types and detection methods. The possibilities are as infinite as a bot's attempts to bypass us!</li>
+                        </ul>
+                        <p class="text-indigo-50 mt-3">
+                            This version is all about pushing the boundaries of what's possible in anti-bot technology. We've meticulously crafted every detail to ensure it's a game-changer. Get ready to download it tomorrow and experience the next level of bot-busting!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW SECTION: Teaser for Version 9.0.0 - Captcha-build - WITH ANIMATION! -->
+            <section class="teaser-section mb-12 v9-epic-teaser">
+                <h2 class="text-white text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
+                    🤯 The Distant Horizon: Version 9.0.0 - **Captcha-build!** 🚀
                 </h2>
                 <p class="text-indigo-100 text-xl italic mb-6">
-                    You've just unleashed the Beast Mode with v3.0.0, but our secret labs are already cooking up something even more mind-blowing!
+                    Alright, buckle up, legends! While v3.0.0 is busy making bots cry, and v4.0.0 is about to drop like a mic, we've got a glimpse of something truly... **EPIC**. This is Pensar Captcha v9.0.0, codenamed: **Captcha-build**!
                 </p>
                 <p class="text-indigo-50 text-lg mb-8">
-                    We can't reveal too much (we don't want the bots to start training, do we?!), but here's a tiny, tantalizing peek at what's brewing for the future of bot annihilation:
+                    Why is it epic? Because it's where we throw out the rulebook and build the future of human verification from the ground up! This isn't just an upgrade; it's a **REVOLUTIONARY, MIND-MELTING, BOT-DESTROYING PARADIGM SHIFT**! We're talking about security so advanced, bots won't even know they've been blocked until they're already crying in a digital corner, questioning their very existence! You'll shiver with excitement, we promise!
                 </p>
-                <ul class="flex flex-wrap justify-center gap-4 mb-8">
-                    <li>✨ Challenges so intuitive, they feel like a game... for humans! (Bots will just see a swirling vortex of confusion!)</li>
-                    <li>🧠 A new layer of defense that makes bots question if they even *exist* in this reality!</li>
-                    <li>🚀 Even *less* effort for you, and *more* existential dread for the bots!</li>
-                    <li>🌌 Next-level, top-secret, classified stuff that will make other anti-bot solutions look like a child's abacus!</li>
-                </ul>
-                <p class="text-indigo-100 text-xl font-bold">
-                    Stay tuned, keep busting those bots, and maybe send some good vibes (or donations! 😉) to our mad scientists! The future of bot-busting is brighter than a fully charged server farm!
+                <div class="update-entry bg-opacity-30"> <!-- Reusing update-entry style with transparency -->
+                    <h3 class="text-2xl font-bold text-white mb-2">📢 PUBLIC FEATURE REVEAL: Adaptive Biometric Challenges! 👁️‍🗨️</h3>
+                    <p class="text-indigo-50">
+                        Prepare to have your digital socks knocked off! Captcha-build introduces **Adaptive Biometric Challenges**. This feature will subtly analyze unique human interaction patterns – from the *rhythm* of your scrolling to the *nuance* of your mouse movements and even the *subtle pressure* of your keypresses – to create a personalized, invisible biometric profile. It's like your digital fingerprint, but for *how you interact*! Bots can copy code, but they can't copy your soul! This means:
+                    </p>
+                    <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-1">
+                        <li>✨ **Unprecedented Human Recognition:** The system learns *you*, making it virtually impossible for any bot to mimic your unique interaction style.</li>
+                        <li>🧠 **Dynamic Challenge Generation:** If a bot *does* manage to fool one layer, the system instantly adapts, generating a new, unique challenge tailored to expose the automation. It's a never-ending game of digital whack-a-mole, and the bots are always the moles!</li>
+                        <li>🚀 **Seamless User Experience:** For legitimate users, these checks are often *invisible* or incredibly subtle, integrating naturally into their browsing flow. For bots? It's a brick wall disguised as a fluffy cloud!</li>
+                    </ul>
+                </div>
+                <p class="text-indigo-100 text-xl font-bold mt-8">
+                    This is just a tiny, *tiny* taste of the future. Pensar Captcha v9.0.0 - Captcha-build is going to redefine digital security and make bots wish they stayed in their silicon cribs. Get ready to witness history in the making, and maybe invest in some extra digital tissues for the bots!
                 </p>
             </section>
 
