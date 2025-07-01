@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pensar Captcha - Download Your Bot-Buster!</title>
+    <title>Pensar Captcha - Download the Beast!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
             color: #f3f4f6;
+            padding: 1rem; /* Add padding for smaller screens */
         }
         .container {
             background-color: rgba(255, 255, 255, 0.15);
@@ -39,6 +40,46 @@
             font-weight: 700;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        .download-button {
+            background: linear-gradient(90deg, #48bb78 0%, #38a169 100%); /* Green gradient */
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border: none;
+            border-radius: 1.5rem; /* More rounded */
+            font-size: 1.5rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            display: inline-block; /* For proper button styling */
+            letter-spacing: 0.05em; /* A little spacing for impact */
+        }
+        .download-button:hover {
+            background: linear-gradient(90deg, #38a169 0%, #48bb78 100%); /* Reverse gradient on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        }
+        .download-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .info-box ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .info-box li {
+            margin-bottom: 0.5rem;
+        }
+        /* Styles for the dynamic software list box */
         .software-list-box {
             background-color: rgba(0, 0, 0, 0.2); /* Darker background for the box */
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -111,64 +152,157 @@
                 <li><a href="update-log.html" class="nav-link">Update Log</a></li>
                 <li><a href="software-download.html" class="nav-link active">Download</a></li>
                 <li><a href="license.html" class="nav-link">License</a></li>
+                <li><a href="donate.html" class="nav-link">💖 Donate</a></li>
             </ul>
         </nav>
 
         <header class="mb-8">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg">
-                <span class="block">Get Pensar Captcha:</span> <span class="block mt-2">Your Anti-Bot Arsenal Awaits!</span>
+                <span class="block">Pensar Captcha:</span> <span class="block mt-2">Unleash the Beast Mode (v3.0.0)!</span>
             </h1>
             <p class="text-lg sm:text-xl lg:text-2xl text-indigo-100 italic">
-                Choose your weapon against the robotic uprising!
+                Your ultimate weapon against bots is here. Download it now and make 'em weep binary tears!
             </p>
         </header>
 
-        <main class="w-full flex flex-col items-center">
-            <!-- The main "Software Box" where downloads will be listed -->
-            <div id="softwareListBox" class="software-list-box">
-                <!-- Content will be dynamically injected here by JavaScript -->
-                <!-- If no software, it shows "No software available" -->
-                <!-- If software, it lists them with download buttons -->
-            </div>
+        <main class="w-full text-left">
+            <section class="mb-12 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                    Get Your Hands on the Future of Bot-Busting!
+                </h2>
+                <p class="text-lg text-indigo-100 mb-8">
+                    This is it, folks! The highly anticipated Pensar Captcha v3.0.0, packed with cross-platform compatibility, multiple tunneling options, and the most devious challenges yet!
+                </p>
+
+                <!-- Main Download Button for the LATEST version -->
+                <a href="v3.0.0_20250701_pensarcaptcha.zip" download class="download-button">
+                    Download Pensar Captcha v3.0.0 (Latest!)
+                    <span class="block text-sm font-normal mt-1">(v3.0.0_20250701_pensarcaptcha.zip)</span>
+                </a>
+                <p class="text-sm text-green-300 mt-4">
+                    (Your zip file is right here in the website folder! How convenient!)
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    What's Inside the Beastly Zip?
+                </h2>
+                <div class="info-box">
+                    <p class="text-indigo-50 mb-4">
+                        Inside this compact package, you'll find the three pillars of your bot-busting empire, ready to be unleashed!
+                    </p>
+                    <ul class="text-indigo-100">
+                        <li>
+                            💻 **`PensarCaptcha.exe` (The GUI Masterpiece!):** Your sleek, multi-tabbed admin panel to control everything. It's the brain that orchestrates the chaos!
+                        </li>
+                        <li>
+                            🧠 **`BotBuster.exe` (The Puzzle Master!):** The Flask backend API that generates all those mind-bending challenges (including the new Pattern Recognition one!) and verifies human smarts.
+                        </li>
+                        <li>
+                            🔬 **`Algorithms.exe` (The Pain Algorithm!):** The silent assassin that analyzes mouse movements, keypress timings, and environmental data to sniff out even the sneakiest bots. This is where the real bot tears flow!
+                        </li>
+                        <li>
+                            📄 **`client_integration_snippet.html`:** The HTML/CSS/JS snippet your GUI generates, ready to be copy-pasted onto your website.
+                        </li>
+                        <li>
+                            ⚙️ **`config.ini`:** Your configuration file, where your settings (like auth tokens) magically persist.
+                        </li>
+                        <li>
+                            📜 **`instruction.txt`:** Your personal guide to installing tunneling tools and setting up the system.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- NEW SECTION: All Previous Versions -->
+            <section class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    Looking for Previous Versions?
+                </h2>
+                <p class="text-lg text-indigo-100 mb-8 text-center">
+                    Sometimes you need to roll back, or just want to see how far we've come! Here are the earlier releases of Pensar Captcha.
+                </p>
+                <!-- The main "Software Box" where downloads will be listed dynamically -->
+                <div id="softwareListBox" class="software-list-box">
+                    <!-- Content will be dynamically injected here by JavaScript -->
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+                    Essential Setup Steps for Success!
+                </h2>
+                <div class="info-box">
+                    <p class="text-indigo-50 mb-4">
+                        To get your Pensar Captcha system up and running like a well-oiled bot-busting machine, pay attention to these vital instructions:
+                    </p>
+                    <ul class="text-indigo-100">
+                        <li>
+                            **Place Executables:** After unzipping, make sure all three `.exe` files (`PensarCaptcha.exe`, `BotBuster.exe`, `Algorithms.exe`) are in the **SAME DIRECTORY** as your `client_integration_snippet.html`, `config.ini`, and `instruction.txt`. They're a powerful team, and they work best together!
+                        </li>
+                        <li>
+                            **Tunneling Tools:** Download and place your chosen tunneling executables (`ngrok.exe`, `localtunnel.exe`, `localxpose.exe`) in the **SAME DIRECTORY** as your Pensar Captcha executables.
+                        </li>
+                        <li>
+                            **Read the `instruction.txt`!** For detailed instructions on how to download, set up, and authenticate `ngrok`, `LocalXpose`, and `localtunnel`, and how to add them to your system PATH, please refer to the included `instruction.txt` file. It's your personal guide to becoming a tunneling wizard!
+                        </li>
+                        <li>
+                            **Launch Order:** Start `PensarCaptcha.exe` first. From there, you can easily launch `BotBuster.exe` and your preferred tunneling service. It's like launching a rocket, and you're the mission control!
+                        </li>
+                    </ul>
+                    <p class="text-indigo-50 mt-4">
+                        Follow these steps, and you'll be blocking bots faster than they can say "I am not a robot!" (which is exactly what a robot would say, by the way).
+                    </p>
+                </div>
+            </section>
         </main>
 
         <footer class="mt-8 text-center text-sm text-indigo-200">
-            <p>&copy; 2025 Pensar Captcha. All rights reserved. Get ready to make bots question their life choices!</p>
+            <p>&copy; 2025 Pensar Captcha. All rights reserved. Our downloads are forged in the fires of bot frustration!</p>
             <p class="mt-2">
                 Made with passion and a healthy dose of anti-bot sentiment.
-                <span class="block mt-1">Disclaimer: Downloads may contain extreme levels of awesome. Proceed with caution.</span>
+                <span class="block mt-1">Disclaimer: Downloads may contain extreme levels of awesome. Get ready for greatness!</span>
             </p>
         </footer>
     </div>
 
     <script>
-        // OH MY GOD, IMBECILE! This is where you update your software versions!
-        // When you release a new version:
-        // 1. Create the .zip file for your software with the format: vX.X.X_YYYYMMDD_your_name.zip
-        //    Example: v1.1.0_20250701_pensarcaptcha.zip
+        // Hey there, brilliant developer! This is where you update your software versions!
+        // When you're ready to release a new version:
+        // 1. Create the .zip file for your amazing software with the format: vX.X.X_YYYYMMDD_your_name.zip
+        //    Example: v3.0.0_20250701_pensarcaptcha.zip
         // 2. Place that .zip file in the SAME folder as this HTML file (or in a 'downloads/' subfolder, then adjust 'getFilename').
-        // 3. Add a new object to this 'softwareVersions' array at the TOP for the latest.
-        // 4. Set 'is_latest_release: true' for the new version, and 'is_latest_release: false' for the previous latest.
-        // It's that easy! Like stealing candy from a bot! LOL!
-
+        // 3. Add a new object to this 'softwareVersions' array at the TOP for the latest and greatest!
+        // 4. Set 'is_latest_release: true' for your new version, and 'is_latest_release: false' for the previous latest.
+        // It's that easy! You're a coding superstar!
         const softwareVersions = [
-            // NEW: Version 2.0.0 - Dual-Core Edition! (Latest and greatest!)
+            // NEW: Version 3.0.0 - The Beast Mode Edition! (Latest and greatest!)
+            {
+                major: 3, minor: 0, patch: 0,
+                release_date_str: "20250701", // YYYYMMDD format for filename
+                name_suffix: "pensarcaptcha", // The 'name' part of the filename
+                display_version: "3.0.0", // For displaying "v3.0.0"
+                display_date: "July 01, 2025", // Human-readable date for display
+                is_latest_release: true // THIS IS THE LATEST!
+            },
+            // Previous: Version 2.0.0 - Dual-Core Edition!
             {
                 major: 2, minor: 0, patch: 0,
                 release_date_str: "20250630", // YYYYMMDD format for filename
                 name_suffix: "pensarcaptcha", // The 'name' part of the filename
                 display_version: "2.0.0", // For displaying "v2.0.0"
                 display_date: "June 30, 2025", // Human-readable date for display
-                is_latest_release: true // THIS IS THE LATEST!
+                is_latest_release: false // No longer the latest, but still fantastic!
             },
-            // Old: Version 1.0.0 - The Original Bot-Buster!
+            // Initial: Version 1.0.0 - The Original Bot-Buster!
             {
                 major: 1, minor: 0, patch: 0,
                 release_date_str: "20250629", // YYYYMMDD format for filename
                 name_suffix: "pensarcaptcha", // The 'name' part of the filename
                 display_version: "1.0.0", // For displaying "v1.0.0"
                 display_date: "June 29, 2025", // Human-readable date for display
-                is_latest_release: false // No longer the latest, but still awesome!
+                is_latest_release: false // No longer the latest, but still a classic!
             }
         ];
 
@@ -186,7 +320,6 @@
         // Helper function to construct the filename from the version object
         function getFilename(versionObj) {
             // This assumes your zip files are in the same directory as this HTML file
-            // If you put them in a 'downloads/' subfolder, change this to `downloads/${filename}`
             return `v${versionObj.display_version}_${versionObj.release_date_str}_${versionObj.name_suffix}.zip`;
         }
 
@@ -204,36 +337,24 @@
             // Sort all valid versions from newest to oldest for display
             validSoftwareVersions.sort(compareVersions);
 
-            if (validSoftwareVersions.length === 0) {
-                // If no software versions exist, display the "No Software Available" message
+            // Filter out the latest version for the dynamic list, as it has its own prominent button
+            const previousVersions = validSoftwareVersions.filter(v => !v.is_latest_release);
+
+            if (previousVersions.length === 0) {
+                // If no previous software versions exist, display a message
                 softwareListBox.innerHTML = `
                     <div class="no-software-message">
-                        No Pensar Captcha Software Available Yet! <br>
-                        Our bot-busting arsenal is still being forged. Check back soon for groundbreaking releases!
+                        No previous Pensar Captcha Software Versions Available Yet! <br>
+                        You're looking at the cutting edge of bot defense!
                     </div>
                 `;
-                // No need for a scrollbar if content is small
                 softwareListBox.style.overflowY = 'hidden'; 
-                softwareListBox.style.maxHeight = 'fit-content'; // Adjust height to content
+                softwareListBox.style.maxHeight = 'fit-content';
             } else {
-                // If software exists, dynamically create and append the elements
-                // Clear any existing content first
-                softwareListBox.innerHTML = ''; 
+                // If previous software exists, dynamically create and append the elements
+                softwareListBox.innerHTML = ''; // Clear any existing content first
 
-                // Add a heading inside the box for clarity
-                const heading = document.createElement('h2');
-                heading.className = 'text-2xl sm:text-3xl font-bold mb-4 text-white text-center w-full';
-                heading.textContent = 'Available Pensar Captcha Software Versions';
-                softwareListBox.appendChild(heading);
-
-                // Add main description inside the box
-                const description = document.createElement('p');
-                description.className = 'text-base sm:text-lg mb-6 text-indigo-50 text-center w-full';
-                description.textContent = 'Download the version that best suits your needs. The latest version is recommended for maximum bot pain!';
-                softwareListBox.appendChild(description);
-
-
-                validSoftwareVersions.forEach(version => {
+                previousVersions.forEach(version => {
                     const entry = document.createElement('div');
                     entry.className = 'software-entry flex flex-col sm:flex-row items-center sm:justify-between w-full'; // Flex for alignment
                     
@@ -242,8 +363,7 @@
                     
                     const versionTitle = document.createElement('p');
                     versionTitle.className = 'version-title';
-                    // Display "(Latest)" only if it's explicitly marked as the latest
-                    versionTitle.textContent = `Pensar Captcha v${version.display_version} ${version.is_latest_release ? '(Latest)' : ''}`;
+                    versionTitle.textContent = `Pensar Captcha v${version.display_version}`;
                     textContent.appendChild(versionTitle);
 
                     const releaseDate = document.createElement('p');
@@ -256,8 +376,8 @@
                     const downloadLink = document.createElement('a');
                     downloadLink.href = getFilename(version); 
                     downloadLink.download = getFilename(version); 
-                    downloadLink.className = `download-button-entry ${version.is_latest_release ? 'latest' : 'old-version'}`;
-                    downloadLink.textContent = `Download ${version.is_latest_release ? 'Latest' : 'v' + version.display_version}`;
+                    downloadLink.className = `download-button-entry old-version`;
+                    downloadLink.textContent = `Download v${version.display_version}`;
                     entry.appendChild(downloadLink);
 
                     softwareListBox.appendChild(entry);
