@@ -15,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
             color: #f3f4f6;
+            padding: 1rem; /* Add padding for smaller screens */
         }
         .container {
             background-color: rgba(255, 255, 255, 0.15);
@@ -49,6 +50,46 @@
         .update-entry:last-child {
             margin-bottom: 0;
         }
+        .teaser-section {
+            background: linear-gradient(45deg, #a78bfa 0%, #8b5cf6 100%); /* A vibrant gradient for the teaser */
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #fff;
+        }
+        .teaser-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+        .teaser-section p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .teaser-section ul {
+            list-style: none; /* No bullets for a cleaner look */
+            padding: 0;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .teaser-section li {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            display: inline-block; /* For tag-like appearance */
+            margin-right: 0.75rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .teaser-section li:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="p-4 sm:p-6 md:p-8">
@@ -74,42 +115,59 @@
         </header>
 
         <main class="w-full text-left">
-            <!-- NEW: Version 3.0.0 Update Log Entry - CROSS-PLATFORM & TUNNELING NIRVANA! -->
+            <!-- NEW: Version 3.0.0 Update Log Entry - RELEASED! -->
             <section class="mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
-                    Upcoming Breakthrough: Version 3.0.0 - The Omni-Platform Liberation!
+                    📢 BREAKING NEWS! Version 3.0.0 - The Beast Mode Has Landed! 🚀
                 </h2>
                 <div class="space-y-6">
                     <div class="update-entry">
-                        <h3 class="text-2xl font-bold text-white mb-2">Version 3.0.0 - Omni-Platform Liberation (Coming Soon!)</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Version 3.0.0 - Beast Mode Unleashed! (July 01, 2025)</h3>
                         <p class="text-indigo-50">
-                            <strong>Get Ready for Universal Bot-Busting!</strong> Pensar Captcha is expanding its reach! Version 3.0.0 will be your ultimate weapon, no matter what operating system you're rocking. Plus, we're adding more tunneling options to provide greater flexibility for our users.
+                            <strong>It's here! The ultimate bot-busting powerhouse has arrived, bringing unprecedented intelligence and flexibility to your anti-bot arsenal! We're not just fighting bots; we're making them question their life choices!</strong>
                         </p>
                         <ul class="list-disc list-inside text-indigo-100 mt-3 ml-4 space-y-1">
-                            <li>💻 **True Cross-Platform Freedom:** Pensar Captcha v3.0.0 will be compiled and ready to run natively on:
+                            <li>💻 **Omni-Platform Liberation:** Pensar Captcha v3.0.0 is now compiled and ready to run natively on **Windows, macOS, and Linux**! No more Python installations needed for the end-user! Just download, deploy, and watch the bot tears flow!</li>
+                            <li>🚇 **Expanded Tunneling Options:** We understand that every genius needs choices! Pensar Captcha v3.0.0 now seamlessly supports **Localtunnel** and **LocalXpose**, in addition to our trusty **Ngrok** compatibility. More choices mean more freedom for your self-hosted, unlimited-usage API!</li>
+                            <li>🧠 **Advanced Behavioral Algorithms (`Algorithms.exe`!):** This is where the real magic (and bot pain!) happens! Our new "Pain Algorithm" analyzes human-like behavior with unprecedented precision:
                                 <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
-                                    <li>🍎 **macOS:** For Apple users!</li>
-                                    <li>🪟 **Windows:** The widely used choice for bot-busting!</li>
-                                    <li>🐧 **Linux:** For open-source enthusiasts and server environments!</li>
+                                    <li>🔬 **Mouse Movement Mastery:** Deep analysis of cursor curvature, natural pauses, velocity profiles, and human-like jitter. Bots move like robots; humans move like... well, humans!</li>
+                                    <li>⌨️ **Keypress Timing Intelligence:** Sniffing out robotic typing by examining inter-key intervals, detecting typos, backspace usage, and even shift key patterns. Humans make glorious mistakes!</li>
+                                    <li>🌐 **Environmental Fingerprinting:** Advanced checks for headless browsers, suspicious WebGL setups, and even subtle inconsistencies in time zones or fonts. Bots can't hide!</li>
+                                    <li>📈 **Dynamic Risk Scoring:** Each metric contributes to a "human-like score," with thresholds that subtly adapt based on observed patterns. It's like a digital "good cop, bad cop" routine, but mostly bad cop for bots!</li>
                                 </ul>
-                                No more Python installations needed for the end-user! Just download and deploy!
                             </li>
-                            <li>🚇 **Expanded Tunneling Options:** We understand that users have diverse needs for making their local backend publicly accessible. Pensar Captcha v3.0.0 will support:
-                                <ul class="list-circle list-inside ml-6 mt-2 space-y-1">
-                                    <li>🔗 **Localtunnel Support:** A straightforward, open-source solution for quick public URLs.</li>
-                                    <li>🌐 **LocalXpose Integration:** Seamless support for localxpose.io, offering another robust and reliable tunneling service.</li>
-                                    <li>🤝 **Continued Ngrok Compatibility:** Ngrok remains a fully supported and integrated tunneling option.</li>
-                                </ul>
-                                More choices mean more freedom for *your* self-hosted, unlimited-usage API! We aim to give you the best tools for free!
-                            </li>
-                            <li>✨ **Under-the-Hood Enhancements:** Expect further refinements to our behavioral analytics and dynamic challenge generation, making our algorithms even smarter at sniffing out those sneaky bots (without any "AI," just pure, unadulterated code genius!).</li>
-                            <li>💖 **Community-Driven Development:** Your donations are directly fueling these epic advancements! Help us build the future of bot-busting!</li>
+                            <li>🤯 **NEW! Pattern Recognition Challenge:** We've introduced a mind-bending challenge where users must identify and order numbers amidst a chaotic grid of distractors. This one is designed to make even the smartest bots throw their virtual hands up in despair!</li>
+                            <li>✨ **Enhanced GUI (`PensarCaptcha.exe`!):** Your sleek, multi-tabbed admin panel is now even more stable, cleaner, and bundles the client snippet internally for easier distribution. It's your ultimate command center!</li>
+                            <li>🛠️ **Modular Architecture:** The system is now a glorious three-part symphony: the GUI, the BotBuster backend, and the Algorithms backend, all working in perfect harmony to crush bots!</li>
                         </ul>
                         <p class="text-indigo-50 mt-3">
-                            This is the next leap in making bots question their very existence, now from literally *any* desktop! Prepare for maximum bot frustration and ultimate human victory, universally!
+                            This isn't just an update; it's a digital declaration of war on bots! Prepare for maximum bot frustration and ultimate human victory, now more powerful than ever!
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <!-- NEW SECTION: Teaser for Version 4.0.0 -->
+            <section class="teaser-section mb-12">
+                <h2 class="text-white text-4xl font-extrabold mb-4 drop-shadow-lg">
+                    🔮 What's Next? A Glimpse into Pensar Captcha v4.0.0! 🤫
+                </h2>
+                <p class="text-indigo-100 text-xl italic mb-6">
+                    You've just unleashed the Beast Mode with v3.0.0, but our secret labs are already cooking up something even more mind-blowing!
+                </p>
+                <p class="text-indigo-50 text-lg mb-8">
+                    We can't reveal too much (we don't want the bots to start training, do we?!), but here's a tiny, tantalizing peek at what's brewing for the future of bot annihilation:
+                </p>
+                <ul class="flex flex-wrap justify-center gap-4 mb-8">
+                    <li>✨ Challenges so intuitive, they feel like a game... for humans! (Bots will just see a swirling vortex of confusion!)</li>
+                    <li>🧠 A new layer of defense that makes bots question if they even *exist* in this reality!</li>
+                    <li>🚀 Even *less* effort for you, and *more* existential dread for the bots!</li>
+                    <li>🌌 Next-level, top-secret, classified stuff that will make other anti-bot solutions look like a child's abacus!</li>
+                </ul>
+                <p class="text-indigo-100 text-xl font-bold">
+                    Stay tuned, keep busting those bots, and maybe send some good vibes (or donations! 😉) to our mad scientists! The future of bot-busting is brighter than a fully charged server farm!
+                </p>
             </section>
 
             <!-- Existing: Version 2.0.0 Update Log Entry -->
@@ -170,9 +228,6 @@
                         </p>
                     </div>
                 </div>
-                <p class="text-indigo-200 mt-8 text-lg">
-                    More groundbreaking updates are always on the horizon. Stay tuned for further enhancements to your bot-busting arsenal!
-                </p>
             </section>
         </main>
 
