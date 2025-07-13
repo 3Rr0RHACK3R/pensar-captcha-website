@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PensarIMAGE</title>
+    <!-- Tailwind CSS CDN for that sleek, modern look, because who has time for custom CSS? -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font because we're fancy like that */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl w-full bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+        <h1 class="text-4xl font-extrabold text-green-400 mb-6 text-center">Privacy Policy</h1>
+        <p class="text-lg text-gray-300 mb-8 text-center">
+            Last Updated: July 13, 2025 (Because things change faster than your TikTok feed, amirite?)
+        </p>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">1. The Lowdown on Your Data (What We Collect)</h2>
+            <p class="mb-4">
+                Alright, listen up, fam! Since your super-secret authenticator app, PensarIMAGE, lives *only* on your personal computer (no cloud, no funny business, just pure local vibes), we're not actually collecting your personal data. Like, zero. Nada. Zilch. Your secret keys stay on your machine, locked down tighter than your crush's DMs.
+            </p>
+            <p class="mb-4">
+                <strong>What we *don't* collect:</strong> Your name, email, IP address, browsing history, your deepest fears, or what you had for breakfast. Seriously, we're not that creepy.
+            </p>
+            <p>
+                <strong>What your app *does* store (locally):</strong> Your chosen usernames and their hashed passwords (super secure, thanks to bcrypt!), and your TOTP secret keys. But again, this is all on *your* device, not ours. We can't see it, access it, or accidentally leak it. Phew!
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">2. Why We Don't Need Your Data (Because We Don't Collect It)</h2>
+            <p class="mb-4">
+                Since we're not collecting your data, we obviously don't need it for anything. It's like asking why a fish needs a bicycle. It just doesn't!
+            </p>
+            <ul class="list-disc list-inside ml-4 text-gray-300">
+                <li>We won't use it for targeted ads (because we don't have it).</li>
+                <li>We won't share it with third parties (because, say it with me, WE DON'T HAVE IT).</li>
+                <li>We won't analyze your habits (because we're too busy trying to figure out TikTok dances).</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">3. Your Rights (You're the Boss!)</h2>
+            <p class="mb-4">
+                Because your data is on your device, you have full control, you absolute monarch!
+            </p>
+            <ul class="list-disc list-inside ml-4 text-gray-300">
+                <li><strong>Access:</strong> You can literally open the `user_data` folder and see your hashed usernames (though the secrets are in separate files for each user, you savvy hacker!).</li>
+                <li><strong>Rectification:</strong> You can change your password or delete accounts within the app.</li>
+                <li><strong>Erasure:</strong> Delete the app, delete the `user_data` folder, and poof! Your data is gone from your machine. We can't help you with that, because, well, we don't have it.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">4. Security (We're Not Messing Around)</h2>
+            <p class="mb-4">
+                While we don't handle your data, we've built the app with some decent local security in mind:
+            </p>
+            <ul class="list-disc list-inside ml-4 text-gray-300">
+                <li><strong>Password Hashing:</strong> Your login passwords are not stored in plain text. They're hashed using `bcrypt`, which is like putting them through a digital shredder and then setting the shreds on fire.</li>
+                <li><strong>Separate User Data:</strong> Each user gets their own private little corner in the `user_data` directory, so your secrets aren't mingling with your roomie's.</li>
+            </ul>
+            <p class="mt-4">
+                However, remember, this is a local app. Your device's security is paramount. If your computer gets compromised, well, that's a whole different level of "oopsie." Keep your OS updated and use strong passwords!
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">5. Changes to This Policy (Stay Woke)</h2>
+            <p>
+                We might update this Privacy Policy from time to time. If we do, we'll probably just update the "Last Updated" date at the top. Since we don't have your contact info, you'll have to check back here manually. It's like checking if your favorite streamer is live – gotta put in the effort!
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">6. Contact Us (If You're Really Bored)</h2>
+            <p>
+                Got questions about this policy? Or just want to tell us how awesome we are? Hit us up!
+            </p>
+            <p class="mt-2 text-gray-300">
+                Email: <a href="mailto:hypernovaf2004v10slicks@gmail.com" class="text-green-400 hover:underline">hypernovaf2004v10slicks@gmail.com</a>
+            </p>
+        </section>
+
+        <div class="flex justify-center mt-10">
+            <a href="terms.html" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Go to Terms of Service (The other fun legal read!)
+            </a>
+        </div>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            &copy; 2025 PensarIMAGE. All Rights Reserved. This app is for local use only. No cloud, no problems (hopefully!).
+        </footer>
+    </div>
+</body>
+</html>
